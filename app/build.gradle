@@ -1,0 +1,71 @@
+
+if (!isDebug.toBoolean()) {
+    apply plugin: 'com.android.application'
+} else {
+    apply plugin: 'com.android.library'
+}
+
+
+android {
+    compileSdkVersion 26
+    buildToolsVersion "26.0.1"
+    defaultConfig {
+        if (!isDebug.toBoolean()) {
+            applicationId "com.wangpos.commpenttest"
+        } else {
+        }
+
+        minSdkVersion 15
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [moduleName: project.getName()]
+            }
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+
+    sourceSets {
+        main {
+            if (!isDebug.toBoolean()) {//主项目需要在非debug模式下开发
+                //release
+                manifest.srcFile 'src/release/AndroidManifest.xml'
+            } else {
+                //debug
+                manifest.srcFile 'src/debug/AndroidManifest.xml'
+            }
+        }
+    }
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:26.0.0-alpha1'
+    testCompile 'junit:junit:4.12'
+    compile project(':basesdk')
+    if (!isDebug.toBoolean()) {
+        compile project(':loginmodule')
+        compile project(':welcomemodule')
+    } else {
+
+    }
+    compile 'com.alibaba:arouter-api:1.2.1'
+    annotationProcessor 'com.alibaba:arouter-compiler:1.1.2'
+
+
+
+}

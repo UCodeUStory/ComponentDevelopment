@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/qiyue/wangpos/code2/CommpentTest/welcomemodule/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="b8042d669d6d3546083cf7235f9ceb9a14cdbf20">
+        <dex dex="/Users/qiyue/wangpos/code2/CommpentTest/app/build/intermediates/pre-dexed/debug/classes_4e6747fa430df8a9791a898319e029d17cf28f9e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/qiyue/wangpos/code2/CommpentTest/basesdk/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="60af4acb9b3bccc7156dc7d1b6dcb1d1c04be9da">
+        <dex dex="/Users/qiyue/wangpos/code2/CommpentTest/app/build/intermediates/pre-dexed/debug/classes_7f736a54f1c29bba9449242d4bf85cc42c836735.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/qiyue/wangpos/code2/CommpentTest/loginmodule/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="eac6d4d173114e46d0bb39d0d8275ed139d40b6a">
+        <dex dex="/Users/qiyue/wangpos/code2/CommpentTest/app/build/intermediates/pre-dexed/debug/classes_0079df27735dbe9d2b0f945a71ed9b500dc3f9fc.jar" />
+    </item>
+
+</items>
